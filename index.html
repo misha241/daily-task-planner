@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Task Planner App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Daily Task Planner</h1>
+        <p class="subtitle">Organize tasks, start times, end times, and daily progress.</p>
+
+        <div class="day-area">
+            <label for="daySelect">Choose a day:</label>
+            <select id="daySelect" onchange="changeDay()">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <input type="time" id="startTimeInput">
+            <input type="time" id="endTimeInput">
+            <button onclick="addTask()">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
